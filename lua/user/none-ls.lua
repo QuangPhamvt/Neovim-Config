@@ -11,6 +11,7 @@ function M.config()
   null_ls.setup {
     debug = false,
     sources = {
+      formatting.flake8,
       formatting.prettier,
       formatting.prettier.with {
         -- extra_filetypes = { "toml" },

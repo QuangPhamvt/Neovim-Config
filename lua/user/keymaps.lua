@@ -1,14 +1,29 @@
 local keymap = vim.keymap.set
-local opts = { noremap = true, silent = true }
+local opts = { silent = true, noremap = true}
 
-keymap("n", "<Space>", "", opts)
+keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+keymap("n", '<leader>w', "<cmd>w<cr>", opts)
 keymap("n", "<C-i>", "<C-i>", opts)
 
 keymap("i", "jk", "<ESC>", opts)
 keymap("i", "kj", "<ESC>", opts)
+
+
+
+
+-- Reize with arrows
+keymap("n", "<C-Up>", ":resize -2<CR>", opts)
+keymap("n", "<C-Down>", ":resize +2<CR>", opts)
+keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
+keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
+
+
+-- Navigate buffers
+keymap('n', "<S-l>", ":bNext<CR>", opts)
+keymap("n", "<S-h>", ":bPrevious<CR>", opts)
 
 -- Better window navigation
 keymap("n", "<m-h>", "<c-w>h", opts)
@@ -44,9 +59,8 @@ keymap({ "n", "o", "x" }, "<s-l>", "g_", opts)
 -- tailwind bearable to work with
 keymap({ "n", "x" }, "j", "gj", opts)
 keymap({ "n", "x" }, "k", "gk", opts)
-keymap("n", "<leader>w", ":lua vim.wo.wrap = not vim.wo.wrap<CR>", opts)
+-- keymap("n", "<leader>w", ":lua vim.wo.wrap = not vim.wo.wrap<CR>", opts)
 
 vim.api.nvim_set_keymap('t', '<C-;>', '<C-\\><C-n>', opts)
-vim.keymap.set("n", "<Space>w", vim.lsp.buf.format, opts)
 
 
