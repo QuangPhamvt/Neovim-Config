@@ -6,6 +6,7 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 keymap("n", "<C-i>", "<C-i>", opts)
+keymap("n", "<Space>w", "<cmd>:w<CR>", opts)
 
 keymap("i", "jk", "<ESC>", opts)
 keymap("i", "kj", "<ESC>", opts)
@@ -44,9 +45,9 @@ keymap({ "n", "o", "x" }, "<s-l>", "g_", opts)
 -- tailwind bearable to work with
 keymap({ "n", "x" }, "j", "gj", opts)
 keymap({ "n", "x" }, "k", "gk", opts)
-keymap("n", "<leader>w", ":lua vim.wo.wrap = not vim.wo.wrap<CR>", opts)
+-- keymap("n", "<leader>w", ":lua vim.wo.wrap = not vim.wo.wrap<CR>", opts)
 
 vim.api.nvim_set_keymap('t', '<C-;>', '<C-\\><C-n>', opts)
-vim.keymap.set("n", "<Space>w", vim.lsp.buf.format, opts)
+-- vim.keymap.set("n", "<Space>w", vim.lsp.buf.format, opts)
 
 

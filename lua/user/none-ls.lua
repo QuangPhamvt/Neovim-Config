@@ -17,9 +17,11 @@ function M.config()
         -- extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" },
       },
       -- null_ls.builtins.diagnostics.eslint,
-      diagnostics.flake8,
       null_ls.builtins.completion.spell,
       formatting.stylua,
+      formatting.black,
+      diagnostics.mypy,
+      diagnostics.ruff
     },
   }
 end

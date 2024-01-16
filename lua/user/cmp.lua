@@ -98,6 +98,7 @@ function M.config()
       ["<CR>"] = cmp.mapping.confirm { select = true },
       ["<Tab>"] = cmp.mapping(function(fallback)
         if cmp.visible() then
+          cmp.open_docs()
           cmp.select_next_item()
         elseif luasnip.expandable() then
           luasnip.expand()
