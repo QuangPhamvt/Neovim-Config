@@ -1,14 +1,14 @@
-require ("user.launch")
 require ("user.keymaps")
+require ("user.launch")
 require ("user.options")
 require "user.autocmds"
-spec ("user.colorscheme")
-spec ("user.devicons")
-spec ("user.treesitter")
-spec ("user.mason")
-spec ("user.schemastore")
-spec ("user.lspconfig")
-spec ("user.cmp")
+spec "user.colorscheme"
+spec "user.devicons"
+spec "user.treesitter"
+spec "user.mason"
+spec "user.schemastore"
+spec "user.lspconfig"
+spec "user.cmp"
 spec "user.telescope"
 spec "user.none-ls"
 spec "user.whichkey"
@@ -24,7 +24,12 @@ spec "user.gitsigns"
 spec "user.alpha"
 spec "user.project"
 spec "user.luasnip"
+<<<<<<< HEAD
+=======
+spec "user.autotag"
+>>>>>>> a8e9998cdfe17a1f09ce41ae23be3bba1d9bc8e2
 
+spec "user.extras.copilot"
 spec "user.extras.tabby"
 spec "user.extras.neoscroll"
 spec "user.extras.oil"
