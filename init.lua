@@ -23,6 +23,7 @@ spec "user.autopairs"
 spec "user.gitsigns"
 spec "user.alpha"
 spec "user.project"
+spec "user.luasnip"
 
 spec "user.extras.tabby"
 spec "user.extras.neoscroll"
