@@ -48,10 +48,10 @@ function M.config()
   require("luasnip/loaders/from_vscode").lazy_load()
   require("luasnip").filetype_extend("typescriptreact", { "html" })
 
-  local check_backspace = function()
-    local col = vim.fn.col "." - 1
-    return col == 0 or vim.fn.getline("."):sub(col, col):match "%s"
-  end
+  -- local check_backspace = function()
+  --   local col = vim.fn.col "." - 1
+  --   return col == 0 or vim.fn.getline("."):sub(col, col):match "%s"
+  -- end
 
   local icons = require "user.icons"
   local types = require "cmp.types"
@@ -134,10 +134,17 @@ function M.config()
           path = "",
           emoji = "",
         })[entry.source.name]
+
         if entry.source.name == "emoji" then
           vim_item.kind = icons.misc.Smiley
           vim_item.kind_hl_group = "CmpItemKindEmoji"
         end
+
+        if entry.source.name == "cmp_tabnine" then
+          vim_item.kind = icons.misc.Robot
+          vim_item.kind_hl_group = "CmpItemKindTabNine"
+        end
+
         return vim_item
       end,
     },
