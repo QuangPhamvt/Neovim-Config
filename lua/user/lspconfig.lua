@@ -1,7 +1,5 @@
 local M = {
-  "neovim/nvim-lspconfig",
-  event = { "BufReadPre", "BufNewFile" },
-  dependencies = {
+  "neovim/nvim-lspconfig", event = { "BufReadPre", "BufNewFile" }, dependencies = {
     {
       "folke/neodev.nvim",
     },
@@ -101,6 +99,7 @@ function M.config()
     })
     lspconfig[server].setup(opts)
   end
+  require "lspconfig".terraformls.setup{}
 end
 
 return M    
