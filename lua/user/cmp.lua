@@ -47,6 +47,7 @@ function M.config()
   local luasnip = require "luasnip"
   require("luasnip/loaders/from_vscode").lazy_load()
   require("luasnip").filetype_extend("typescriptreact", { "html" })
+  
 
   -- local check_backspace = function()
   --   local col = vim.fn.col "." - 1
@@ -209,7 +210,9 @@ function M.config()
       ghost_text = false,
     },
   }
-
+  require("cmp").config.formatting = {
+    format = require("tailwindcss-colorizer-cmp").formatter
+  }
   pcall(function()
     -- local function on_confirm_done(...)
     --   require("nvim-autopairs.completion.cmp").on_confirm_done()(...)

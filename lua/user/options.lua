@@ -40,6 +40,7 @@ vim.opt.guifont = "monospace:h17" -- the font used in graphical neovim applicati
 vim.opt.title = false
 vim.opt.spelllang = "en_us"
 vim.opt.spell = true
+vim.opt.cursorline = true
 
 -- colorcolumn = "80",
 -- colorcolumn = "120",

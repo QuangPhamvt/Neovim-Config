@@ -63,7 +63,7 @@ function M.config()
 
     g = {
       name = "Git",
-      g = { "<cmd>Neogit<cr>", "Neogit" },
+      g = { "<cmd>LazyGit<cr>", "Lazygit" },
       j = { "<cmd>lua require 'gitsigns'.next_hunk({navigation_message = false})<cr>", "Next Hunk" },
       k = { "<cmd>lua require 'gitsigns'.prev_hunk({navigation_message = false})<cr>", "Prev Hunk" },
       l = { "<cmd>lua require 'gitsigns'.blame_line()<cr>", "Blame" },
@@ -86,6 +86,7 @@ function M.config()
         "<cmd>Gitsigns diffthis HEAD<cr>",
         "Git Diff",
       },
+      n = {"<cmd>Neogit<cr>", "Neogit"},
     },
 
     l = {
