@@ -41,6 +41,7 @@ vim.opt.title = false
 vim.opt.spelllang = "en_us"
 vim.opt.spell = true
 vim.opt.cursorline = true
+vim.opt.pumblend = 10
 
 -- colorcolumn = "80",
 -- colorcolumn = "120",

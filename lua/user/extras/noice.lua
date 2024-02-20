@@ -14,6 +14,13 @@ local M =  {
 
 function  M.config ()
   require("noice").setup({
+    views = {
+      mini = {
+        win_options = {
+          winblend = 0
+        }
+      },
+    },
     lsp = {
       -- override markdown rendering so that **cmp** and other plugins use **Treesitter**
       override = {

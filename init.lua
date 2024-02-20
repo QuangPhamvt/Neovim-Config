@@ -1,6 +1,6 @@
-require ("user.keymaps")
-require ("user.launch")
-require ("user.options")
+require "user.keymaps"
+require "user.launch"
+require "user.options"
 require "user.autocmds"
 spec "user.alpha"
 spec "user.autopairs"
@@ -53,4 +53,7 @@ spec "user.extras.tabby"
 spec "user.extras.tailwind-colorizer"
 spec "user.extras.trouble"
 spec "user.extras.tsc"
+spec "user.extras.transparent"
+spec "user.extras.notify"
 require ("user.lazy")
+vim.cmd("colorscheme onedark_vivid")

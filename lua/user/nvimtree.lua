@@ -29,16 +29,18 @@ function M.config()
       width = 60,
       relativenumber = true,
     },
+    sort = {
+      sorter = "case_sensitive",
+    },
     renderer = {
-      add_trailing = false,
+      add_trailing = true,
       group_empty = false,
       highlight_git = false,
       full_name = false,
-      highlight_opened_files = "none",
       root_folder_label = ":t",
       indent_width = 2,
       indent_markers = {
-        enable = false,
+        enable = true,
         inline_arrows = true,
         icons = {
           corner = "└",
